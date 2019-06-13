@@ -1,0 +1,9 @@
+GUI r
+DELAY 100
+STRING powershell
+DELAY 100
+ENTER
+DELAY 100
+STRING [Reflection.Assembly]::LoadWithPartialName('System.Speech') | Out-Null ;$object = New-Object System.Speech.Synthesis.SpeechSynthesizer ; $object.SelectVoiceByHints('Male'); $object.Speak('ALEXA play we will rock you')
+DELAY 100
+ENTER
